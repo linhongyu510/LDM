@@ -1,0 +1,642 @@
+Last login: Wed Mar  5 22:06:55 on ttys001
+/Users/linhongyu/.zshrc:export:119: not valid in this context: Fusion.app/Contents/Public:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+(base) ➜  ~ ssh -p 52842 root@connect.yza1.seetacloud.com
+root@connect.yza1.seetacloud.com's password: 
+Welcome to Ubuntu 18.04.6 LTS (GNU/Linux 5.15.0-57-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, you can run the 'unminimize' command.
+Last login: Fri Feb 28 16:35:24 2025 from 127.0.0.1
++--------------------------------------------------AutoDL--------------------------------------------------------+
+目录说明:
+╔═════════════════╦════════╦════╦═════════════════════════════════════════════════════════════════════════╗
+║目录             ║名称    ║速度║说明                                                                     ║
+╠═════════════════╬════════╬════╬═════════════════════════════════════════════════════════════════════════╣
+║/                ║系 统 盘║一般║实例关机数据不会丢失，可存放代码等。会随保存镜像一起保存。               ║
+║/root/autodl-tmp ║数 据 盘║ 快 ║实例关机数据不会丢失，可存放读写IO要求高的数据。但不会随保存镜像一起保存 ║
+╚═════════════════╩════════╩════╩═════════════════════════════════════════════════════════════════════════╝
+CPU ：14 核心
+内存：45 GB
+GPU ：NVIDIA GeForce RTX 3090, 1
+存储：
+  系 统 盘/               ：47% 14G/30G
+  数 据 盘/root/autodl-tmp：17% 8.2G/50G
++----------------------------------------------------------------------------------------------------------------+
+*注意: 
+1.系统盘较小请将大的数据存放于数据盘或文件存储中，重置系统时数据盘和文件存储中的数据不受影响
+2.清理系统盘请参考：https://www.autodl.com/docs/qa1/
+3.终端中长期执行命令请使用screen等工具开后台运行，确保程序不受SSH连接中断影响：https://www.autodl.com/docs/daemon/
+root@autodl-container-cb2b40b833-524095af:~# ls
+autodl-pub  autodl-tmp  miniconda3  tf-logs
+root@autodl-container-cb2b40b833-524095af:~# cd autodl-tmp/
+root@autodl-container-cb2b40b833-524095af:~/autodl-tmp# ls
+AI              covid        food_classification  README.md         SRTP
+assets          dataset      Gold                 requirements.txt  test.py
+bert__          DEMOS        GPT2                 sparkAPi.py       Tomato
+best_model.pth  Douban_BERT  learn                Spider
+CNN.py          driver.py    MNIST                src
+root@autodl-container-cb2b40b833-524095af:~/autodl-tmp# cd SRTP/
+root@autodl-container-cb2b40b833-524095af:~/autodl-tmp/SRTP# ls
+clip.py      model1_1.py  model3_2.py        __pycache__   train1.txt
+download.py  model1_2.py  model3_3.py        runs          Untitled.ipynb
+logs         model2_1.py  model3_4.py        saved_models
+main.py      model3_1.py  OpenDataLab___AID  test.py
+root@autodl-container-cb2b40b833-524095af:~/autodl-tmp/SRTP# python model3_4.py 
+/root/miniconda3/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/root/miniconda3/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG16_Weights.IMAGENET1K_V1`. You can also use `weights=VGG16_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/root/miniconda3/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=Inception_V3_Weights.IMAGENET1K_V1`. You can also use `weights=Inception_V3_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/root/miniconda3/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Epoch 0/29
+Train Loss: 2.5427 Acc: 0.2358
+Val Loss: 2.0389 Acc: 0.3390
+
+Epoch 1/29
+Train Loss: 1.7128 Acc: 0.4460
+Val Loss: 1.4581 Acc: 0.5385
+
+Epoch 2/29
+Train Loss: 1.3749 Acc: 0.5677
+Val Loss: 1.1263 Acc: 0.6470
+
+Epoch 3/29
+Train Loss: 1.0539 Acc: 0.6705
+Val Loss: 1.0269 Acc: 0.6735
+
+Epoch 4/29
+Train Loss: 0.8706 Acc: 0.7218
+Val Loss: 1.0334 Acc: 0.6970
+
+Epoch 5/29
+Train Loss: 0.7566 Acc: 0.7636
+Val Loss: 0.8143 Acc: 0.7605
+
+Epoch 6/29
+Train Loss: 0.6033 Acc: 0.8101
+Val Loss: 0.8958 Acc: 0.7385
+
+Epoch 7/29
+Train Loss: 0.5472 Acc: 0.8305
+Val Loss: 0.7172 Acc: 0.7810
+
+Epoch 8/29
+Train Loss: 0.4808 Acc: 0.8463
+Val Loss: 0.7894 Acc: 0.7930
+
+Epoch 9/29
+Train Loss: 0.3786 Acc: 0.8790
+Val Loss: 0.8388 Acc: 0.7670
+
+Epoch 10/29
+Train Loss: 0.1759 Acc: 0.9445
+Val Loss: 0.7017 Acc: 0.8180
+
+Epoch 11/29
+Train Loss: 0.0922 Acc: 0.9695
+Val Loss: 0.6865 Acc: 0.8345
+
+Epoch 12/29
+Train Loss: 0.0666 Acc: 0.9795
+Val Loss: 0.6831 Acc: 0.8370
+
+Epoch 13/29
+Train Loss: 0.0664 Acc: 0.9801
+Val Loss: 0.7693 Acc: 0.8380
+
+Epoch 14/29
+Train Loss: 0.1015 Acc: 0.9675
+Val Loss: 0.8122 Acc: 0.8040
+
+Epoch 15/29
+Train Loss: 0.0559 Acc: 0.9825
+Val Loss: 1.0412 Acc: 0.8050
+
+Epoch 16/29
+Train Loss: 0.0670 Acc: 0.9790
+Val Loss: 0.8660 Acc: 0.8400
+
+Epoch 17/29
+Train Loss: 0.1178 Acc: 0.9635
+Val Loss: 0.7110 Acc: 0.8210
+
+Epoch 18/29
+Train Loss: 0.0582 Acc: 0.9833
+Val Loss: 0.8326 Acc: 0.8380
+
+Epoch 19/29
+Train Loss: 0.0726 Acc: 0.9790
+Val Loss: 0.8359 Acc: 0.8330
+
+Epoch 20/29
+Train Loss: 0.0261 Acc: 0.9929
+Val Loss: 0.9121 Acc: 0.8340
+
+Epoch 21/29
+Train Loss: 0.0107 Acc: 0.9971
+Val Loss: 0.7814 Acc: 0.8595
+
+Epoch 22/29
+Train Loss: 0.0025 Acc: 0.9994
+Val Loss: 0.7840 Acc: 0.8615
+
+Epoch 23/29
+Train Loss: 0.0015 Acc: 0.9999
+Val Loss: 0.8273 Acc: 0.8600
+
+Epoch 24/29
+Train Loss: 0.0040 Acc: 0.9988
+Val Loss: 0.9119 Acc: 0.8565
+
+Epoch 25/29
+Train Loss: 0.0032 Acc: 0.9996
+Val Loss: 0.9574 Acc: 0.8595
+
+Epoch 26/29
+Train Loss: 0.0113 Acc: 0.9972
+Val Loss: 0.8980 Acc: 0.8600
+
+Epoch 27/29
+Train Loss: 0.0289 Acc: 0.9914
+Val Loss: 1.0860 Acc: 0.8355
+
+Epoch 28/29
+Train Loss: 0.0186 Acc: 0.9949
+Val Loss: 0.9801 Acc: 0.8500
+
+Epoch 29/29
+Train Loss: 0.0118 Acc: 0.9972
+Val Loss: 0.9574 Acc: 0.8575
+
+Best Val Acc: 0.8615
+Epoch 0/29
+Train Loss: 0.8506 Acc: 0.7628
+Val Loss: 0.4682 Acc: 0.8755
+
+Epoch 1/29
+Train Loss: 0.4025 Acc: 0.8792
+Val Loss: 0.3769 Acc: 0.8900
+
+Epoch 2/29
+Train Loss: 0.2609 Acc: 0.9191
+Val Loss: 0.3405 Acc: 0.8995
+
+Epoch 3/29
+Train Loss: 0.2016 Acc: 0.9419
+Val Loss: 0.2854 Acc: 0.9160
+
+Epoch 4/29
+Train Loss: 0.1910 Acc: 0.9407
+Val Loss: 0.2252 Acc: 0.9345
+
+Epoch 5/29
+Train Loss: 0.1524 Acc: 0.9535
+Val Loss: 0.2564 Acc: 0.9240
+
+Epoch 6/29
+Train Loss: 0.1289 Acc: 0.9619
+Val Loss: 0.2403 Acc: 0.9285
+
+Epoch 7/29
+Train Loss: 0.1088 Acc: 0.9665
+Val Loss: 0.2662 Acc: 0.9215
+
+Epoch 8/29
+Train Loss: 0.1333 Acc: 0.9605
+Val Loss: 0.3053 Acc: 0.9160
+
+Epoch 9/29
+Train Loss: 0.0981 Acc: 0.9685
+Val Loss: 0.2147 Acc: 0.9340
+
+Epoch 10/29
+Train Loss: 0.0310 Acc: 0.9903
+Val Loss: 0.1324 Acc: 0.9600
+
+Epoch 11/29
+Train Loss: 0.0146 Acc: 0.9956
+Val Loss: 0.1384 Acc: 0.9610
+
+Epoch 12/29
+Train Loss: 0.0087 Acc: 0.9979
+Val Loss: 0.1289 Acc: 0.9600
+
+Epoch 13/29
+Train Loss: 0.0143 Acc: 0.9966
+Val Loss: 0.1293 Acc: 0.9645
+
+Epoch 14/29
+Train Loss: 0.0062 Acc: 0.9989
+Val Loss: 0.1359 Acc: 0.9665
+
+Epoch 15/29
+Train Loss: 0.0090 Acc: 0.9975
+Val Loss: 0.1852 Acc: 0.9485
+
+Epoch 16/29
+Train Loss: 0.0189 Acc: 0.9941
+Val Loss: 0.1794 Acc: 0.9525
+
+Epoch 17/29
+Train Loss: 0.0474 Acc: 0.9856
+Val Loss: 0.2543 Acc: 0.9315
+
+Epoch 18/29
+Train Loss: 0.0365 Acc: 0.9885
+Val Loss: 0.2455 Acc: 0.9360
+
+Epoch 19/29
+Train Loss: 0.0457 Acc: 0.9860
+Val Loss: 0.2134 Acc: 0.9430
+
+Epoch 20/29
+Train Loss: 0.0156 Acc: 0.9961
+Val Loss: 0.1406 Acc: 0.9615
+
+Epoch 21/29
+Train Loss: 0.0094 Acc: 0.9972
+Val Loss: 0.1586 Acc: 0.9570
+
+Epoch 22/29
+Train Loss: 0.0042 Acc: 0.9989
+Val Loss: 0.1460 Acc: 0.9600
+
+Epoch 23/29
+Train Loss: 0.0046 Acc: 0.9989
+Val Loss: 0.1358 Acc: 0.9640
+
+Epoch 24/29
+Train Loss: 0.0041 Acc: 0.9986
+Val Loss: 0.1472 Acc: 0.9665
+
+Epoch 25/29
+Train Loss: 0.0031 Acc: 0.9991
+Val Loss: 0.1461 Acc: 0.9620
+
+Epoch 26/29
+Train Loss: 0.0048 Acc: 0.9989
+Val Loss: 0.1465 Acc: 0.9625
+
+Epoch 27/29
+Train Loss: 0.0049 Acc: 0.9989
+Val Loss: 0.1824 Acc: 0.9605
+
+Epoch 28/29
+Train Loss: 0.0068 Acc: 0.9984
+Val Loss: 0.1548 Acc: 0.9580
+
+Epoch 29/29
+Train Loss: 0.0046 Acc: 0.9990
+Val Loss: 0.1297 Acc: 0.9645
+
+Best Val Acc: 0.9665
+Epoch 0/29
+Train Loss: 0.9770 Acc: 0.7161
+Val Loss: 0.6539 Acc: 0.7985
+
+Epoch 1/29
+Train Loss: 0.4848 Acc: 0.8536
+Val Loss: 0.4582 Acc: 0.8680
+
+Epoch 2/29
+Train Loss: 0.3816 Acc: 0.8882
+Val Loss: 0.4138 Acc: 0.8755
+
+Epoch 3/29
+Train Loss: 0.2747 Acc: 0.9149
+Val Loss: 0.4739 Acc: 0.8665
+
+Epoch 4/29
+Train Loss: 0.2353 Acc: 0.9249
+Val Loss: 0.3369 Acc: 0.8975
+
+Epoch 5/29
+Train Loss: 0.2202 Acc: 0.9324
+Val Loss: 0.3232 Acc: 0.9005
+
+Epoch 6/29
+Train Loss: 0.1526 Acc: 0.9526
+Val Loss: 0.3639 Acc: 0.9025
+
+Epoch 7/29
+Train Loss: 0.1383 Acc: 0.9546
+Val Loss: 0.3193 Acc: 0.9200
+
+Epoch 8/29
+Train Loss: 0.1408 Acc: 0.9535
+Val Loss: 0.3867 Acc: 0.8925
+
+Epoch 9/29
+Train Loss: 0.1427 Acc: 0.9547
+Val Loss: 0.5522 Acc: 0.8665
+
+Epoch 10/29
+Train Loss: 0.0411 Acc: 0.9874
+Val Loss: 0.1792 Acc: 0.9515
+
+Epoch 11/29
+Train Loss: 0.0172 Acc: 0.9961
+Val Loss: 0.1741 Acc: 0.9490
+
+Epoch 12/29
+Train Loss: 0.0083 Acc: 0.9982
+Val Loss: 0.1686 Acc: 0.9570
+
+Epoch 13/29
+Train Loss: 0.0078 Acc: 0.9982
+Val Loss: 0.1591 Acc: 0.9570
+
+Epoch 14/29
+Train Loss: 0.0084 Acc: 0.9980
+Val Loss: 0.2184 Acc: 0.9505
+
+Epoch 15/29
+Train Loss: 0.0179 Acc: 0.9948
+Val Loss: 0.1918 Acc: 0.9455
+
+Epoch 16/29
+Train Loss: 0.0133 Acc: 0.9965
+Val Loss: 0.2100 Acc: 0.9455
+
+Epoch 17/29
+Train Loss: 0.0173 Acc: 0.9960
+Val Loss: 0.2357 Acc: 0.9400
+
+Epoch 18/29
+Train Loss: 0.0382 Acc: 0.9893
+Val Loss: 0.2666 Acc: 0.9305
+
+Epoch 19/29
+Train Loss: 0.0667 Acc: 0.9770
+Val Loss: 0.3214 Acc: 0.9165
+
+Epoch 20/29
+Train Loss: 0.0150 Acc: 0.9959
+Val Loss: 0.1604 Acc: 0.9550
+
+Epoch 21/29
+Train Loss: 0.0038 Acc: 0.9994
+Val Loss: 0.1540 Acc: 0.9585
+
+Epoch 22/29
+Train Loss: 0.0030 Acc: 0.9990
+Val Loss: 0.1625 Acc: 0.9560
+
+Epoch 23/29
+Train Loss: 0.0030 Acc: 0.9995
+Val Loss: 0.1703 Acc: 0.9550
+
+Epoch 24/29
+Train Loss: 0.0077 Acc: 0.9985
+Val Loss: 0.1545 Acc: 0.9600
+
+Epoch 25/29
+Train Loss: 0.0031 Acc: 0.9995
+Val Loss: 0.1408 Acc: 0.9620
+
+Epoch 26/29
+Train Loss: 0.0013 Acc: 0.9998
+Val Loss: 0.1481 Acc: 0.9595
+
+Epoch 27/29
+Train Loss: 0.0018 Acc: 0.9996
+Val Loss: 0.1605 Acc: 0.9610
+
+Epoch 28/29
+Train Loss: 0.0073 Acc: 0.9978
+Val Loss: 0.2000 Acc: 0.9500
+
+Epoch 29/29
+Train Loss: 0.0063 Acc: 0.9984
+Val Loss: 0.1661 Acc: 0.9545
+
+Best Val Acc: 0.9620
+
+单模型评估结果:
+VGG-16:
+Accuracy: 0.8575
+Confusion Matrix:
+[[63  0  0  0  0  1  0  0  0  1  0  0  4  0  0  1  1  1  0  0  0  1  2  0 0  0  6  0  0  0]
+ [ 1 58  0  1  0  0  0  0  0  1  1  0  0  0  0  1  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0 41  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  6  0  0  0  0  0 0  1  0  0  0  0]
+ [ 0  0  0 79  0  0  0  0  0  0  0  0  0  0  0  1  1  0  0  0  3  0  0  1 0  0  1  0  1  0]
+ [ 1  0  0  0 66  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  0  0  1 0  0  0  0  0  1]
+ [ 0  0  0  0  0 31  1  0  0  0  0  0  1  0  0  0  0  0  0  0  0  1  0  0 0  0  8  0  3  0]
+ [ 0  0  0  0  0  2 40  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 1  0  1  0  1  0]
+ [ 0  0  0  0  0  0  3 68  1  0  0  0  0  0  0  0  2  0  0  0  1  0  0  0 3  0  0  0  0  0]
+ [ 0  0  0  0  0  0  2  8 75  0  0  0  2  0  1  1  0  0  0  0  0  0  1  0 3  0  1  0  0  0]
+ [ 0  3  0  3  0  0  0  0  0 55  1  0  0  1  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0 72  0  0  0  0  0  0  0  0  0  0  0  0  1 0  0  0  0  0  2]
+ [ 0  0  0  0  0  0  0  0  0  0  0 50  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 1  0  0  0  0  0  6  2  3  0  0  0 41  0  0  1  0  0  0  0  0  1  1  0 4  0  1  0  0  1]
+ [ 0  0  0  0  0  0  0  0  0  0  1  0  0 51  0  0  0  0  0  1  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  1  0  0  0  0  0 53  0  1  0  0  0  0  0  2  0 1  1  1  0  0  0]
+ [ 1  2  0  0  0  0  0  0  0  0  0  0  0  0  0 59  0  0  0  0  0  0  0  3 0  0  1  0  0  0]
+ [ 0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0 54  0  0  0  0  0  4  0 2  0  3  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0 79  0  0  0  0  1  0 0  0  1  0  0  0]
+ [ 0  0  1  0  0  2  0  0  0  0  0  0  0  1  0  0  0  0 54  1  1  0  0  1 0  0  0  3  0  0]
+ [ 0  0  0  0  1  0  1  0  0  0  0  0  0  0  0  0  4  0  0 72  1  0  0  1 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 84  0  1  0 1  0  0  0  0  0]
+ [ 1  0  0  0  0  0  1  5  0  0  1  0  1  0  0  0  0  0  0  0  0 39  0  0 1  0  2  0  0  4]
+ [ 0  0  0  0  0  0  4  1  0  0  0  0  1  0  2  0  5  0  0  0  2  0 38  1 1  0  1  0  2  0]
+ [ 0  0  0  0  0  0  0  0  0  0  4  0  0  0  0  0  1  0  0  1  0  0  2 56 0  0  0  0  0  0]
+ [ 3  0  0  0  0  0  4 10  1  0  0  0  3  0  2  0  2  0  1  0  0  0  5  0 29 0  1  0  1  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0 60  0  0  0  0]
+ [ 1  0  1  0  0  3  5  0  0  0  0  0  0  0  0  0  5  3  0  0  0  0  2  0 0  0 44  0  0  2]
+ [ 0  0  0  0  0  1  1  0  0  0  0  0  0  0  0  0  0  0  4  0  0  0  0  0 0  0  0 45  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  2  0  0  0  0  0  0  0 0  0  0  0 72  0]
+ [ 0  0  0  0  1  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0 0  0  0  0  0 87]]
+Report:
+                   precision    recall  f1-score   support
+
+          Airport       0.88      0.78      0.82        81
+         BareLand       0.92      0.92      0.92        63
+    BaseballField       0.95      0.84      0.89        49
+            Beach       0.95      0.91      0.93        87
+           Bridge       0.97      0.93      0.95        71
+           Center       0.78      0.69      0.73        45
+           Church       0.59      0.85      0.70        47
+       Commercial       0.69      0.87      0.77        78
+ DenseResidential       0.93      0.80      0.86        94
+           Desert       0.96      0.87      0.92        63
+         Farmland       0.90      0.96      0.93        75
+           Forest       1.00      1.00      1.00        50
+       Industrial       0.77      0.66      0.71        62
+           Meadow       0.94      0.96      0.95        53
+MediumResidential       0.90      0.88      0.89        60
+         Mountain       0.92      0.89      0.91        66
+             Park       0.69      0.84      0.76        64
+          Parking       0.95      0.96      0.96        82
+       Playground       0.83      0.84      0.84        64
+             Pond       0.96      0.90      0.93        80
+             Port       0.89      0.98      0.93        86
+   RailwayStation       0.91      0.71      0.80        55
+           Resort       0.64      0.66      0.65        58
+            River       0.86      0.88      0.87        64
+           School       0.63      0.47      0.54        62
+SparseResidential       0.97      1.00      0.98        60
+           Square       0.61      0.67      0.64        66
+          Stadium       0.94      0.88      0.91        51
+     StorageTanks       0.90      0.97      0.94        74
+          Viaduct       0.90      0.97      0.93        90
+
+         accuracy                           0.86      2000
+        macro avg       0.86      0.85      0.85      2000
+     weighted avg       0.86      0.86      0.86      2000
+
+Inception-v3:
+Accuracy: 0.9645
+Confusion Matrix:
+[[78  0  0  0  0  0  0  0  0  0  1  0  1  0  0  0  1  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0 60  0  0  0  0  0  0  0  1  0  0  1  0  0  1  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0 49  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0 87  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0 71  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0 41  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0 0  0  3  0  0  0]
+ [ 0  0  0  0  0  2 45  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0 74  0  0  0  0  4  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  1 93  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  3  0  0  0  0  0  0  0 59  0  0  0  0  0  1  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  1  0  0  0  0  0 74  0  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0 50  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0 61  0  0  0  0  0  0  0  0  0  0  0 1  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0 53  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 58  0  0  0  0  0  0  0  0  0 0  1  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 66  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 59  0  0  0  0  0  3  0 1  0  1  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 82  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 63  0  0  0  0  1 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 78  1  0  1  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 86  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  1  0  1  1  0  0  0  0  0  0  0  0  0  0  0  0 51  1  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  3  0  0  0  0  0 55  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0 63 0  0  0  0  0  0]
+ [ 1  0  0  0  0  0  1  3  1  0  0  0  2  0  0  0  0  0  2  0  0  0  2  0 50 0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0 59  1  0  0  0]
+ [ 0  0  0  0  0  2  1  0  0  0  0  0  0  0  0  0  2  0  0  0  0  0  0  1 0  0 59  0  0  1]
+ [ 0  0  0  0  0  1  1  0  0  0  0  0  0  0  0  0  0  0  3  0  0  0  0  0 0  0  0 46  0  0]
+ [ 0  0  0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0 0  0  0  0 71  0]
+ [ 0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1 0  0  0  0  0 88]]
+Report:
+                   precision    recall  f1-score   support
+
+          Airport       0.99      0.96      0.97        81
+         BareLand       0.95      0.95      0.95        63
+    BaseballField       1.00      1.00      1.00        49
+            Beach       1.00      1.00      1.00        87
+           Bridge       0.99      1.00      0.99        71
+           Center       0.85      0.91      0.88        45
+           Church       0.94      0.96      0.95        47
+       Commercial       0.90      0.95      0.92        78
+ DenseResidential       0.98      0.99      0.98        94
+           Desert       0.98      0.94      0.96        63
+         Farmland       0.99      0.99      0.99        75
+           Forest       1.00      1.00      1.00        50
+       Industrial       0.88      0.98      0.93        62
+           Meadow       1.00      1.00      1.00        53
+MediumResidential       1.00      0.97      0.98        60
+         Mountain       0.97      1.00      0.99        66
+             Park       0.89      0.92      0.91        64
+          Parking       1.00      1.00      1.00        82
+       Playground       0.93      0.98      0.95        64
+             Pond       0.99      0.97      0.98        80
+             Port       0.99      1.00      0.99        86
+   RailwayStation       1.00      0.93      0.96        55
+           Resort       0.87      0.95      0.91        58
+            River       0.95      0.98      0.97        64
+           School       0.96      0.81      0.88        62
+SparseResidential       0.98      0.98      0.98        60
+           Square       0.92      0.89      0.91        66
+          Stadium       1.00      0.90      0.95        51
+     StorageTanks       1.00      0.96      0.98        74
+          Viaduct       0.99      0.98      0.98        90
+
+         accuracy                           0.96      2000
+        macro avg       0.96      0.96      0.96      2000
+     weighted avg       0.97      0.96      0.96      2000
+
+ResNet-50:
+Accuracy: 0.9545
+Confusion Matrix:
+[[79  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1 0  0  1  0  0  0]
+ [ 0 62  0  0  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0 49  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0 84  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  2 0  0  0  0  0  0]
+ [ 0  0  0  0 70  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  1]
+ [ 0  0  0  0  0 37  2  0  0  0  0  0  2  0  0  0  0  0  0  0  0  0  0  0 0  0  4  0  0  0]
+ [ 0  0  0  0  0  3 43  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  1 72  0  0  0  0  1  0  0  0  1  0  0  0  0  0  0  0 3  0  0  0  0  0]
+ [ 0  0  0  0  0  0  2  2 86  0  0  0  1  0  1  0  1  0  0  0  0  0  0  0 1  0  0  0  0  0]
+ [ 0  6  0  0  0  0  0  0  0 57  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0  0  0 73  0  0  1  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0  0  0  0 49  0  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0 62  0  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0  0  0  0  0  0 52  0  0  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  1  0  0  0  0  0  0 58  0  0  0  0  0  0  0  0  0 0  1  0  0  0  0]
+ [ 0  1  0  0  0  0  0  0  0  0  1  0  0  0  0 64  0  0  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 58  0  0  0  0  0  4  0 0  0  1  0  0  1]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 82  0  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 64  0  0  0  0  0 0  0  0  0  0  0]
+ [ 0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0 78  0  0  0  1 0  0  0  0  0  0]
+ [ 0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 85  0  0  0 0  0  0  0  0  0]
+ [ 1  0  0  0  0  0  0  1  1  0  0  0  0  0  0  0  0  0  0  0  0 52  0  0 0  0  0  0  0  0]
+ [ 1  0  0  0  0  0  0  0  0  0  0  0  1  0  0  1  3  0  0  0  1  0 50  0 0  0  1  0  0  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 64 0  0  0  0  0  0]
+ [ 0  0  0  0  0  0  1  3  0  0  0  0  1  0  0  0  0  0  0  0  0  0  0  0 56 0  1  0  0  0]
+ [ 1  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 0 58  1  0  0  0]
+ [ 0  0  0  0  0  1  2  0  0  0  1  0  2  0  0  0  3  0  0  0  0  0  0  0 0  0 56  0  0  1]
+ [ 0  0  0  0  0  0  1  0  0  0  0  0  1  0  0  0  0  0  1  0  0  0  0  0 0  0  0 48  0  0]
+ [ 0  0  0  0  0  0  0  1  0  0  0  0  0  0  0  0  1  0  0  0  0  0  0  0 0  0  0  0 72  0]
+ [ 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  1  0  0 0  0  0  0  0 89]]
+Report:
+                   precision    recall  f1-score   support
+
+          Airport       0.96      0.98      0.97        81
+         BareLand       0.86      0.98      0.92        63
+    BaseballField       1.00      1.00      1.00        49
+            Beach       1.00      0.97      0.98        87
+           Bridge       0.97      0.99      0.98        71
+           Center       0.90      0.82      0.86        45
+           Church       0.83      0.91      0.87        47
+       Commercial       0.89      0.92      0.91        78
+ DenseResidential       0.99      0.91      0.95        94
+           Desert       1.00      0.90      0.95        63
+         Farmland       0.96      0.97      0.97        75
+           Forest       1.00      0.98      0.99        50
+       Industrial       0.86      1.00      0.93        62
+           Meadow       0.98      0.98      0.98        53
+MediumResidential       0.98      0.97      0.97        60
+         Mountain       0.98      0.97      0.98        66
+             Park       0.87      0.91      0.89        64
+          Parking       1.00      1.00      1.00        82
+       Playground       0.98      1.00      0.99        64
+             Pond       1.00      0.97      0.99        80
+             Port       0.99      0.99      0.99        86
+   RailwayStation       0.98      0.95      0.96        55
+           Resort       0.93      0.86      0.89        58
+            River       0.94      1.00      0.97        64
+           School       0.93      0.90      0.92        62
+SparseResidential       0.98      0.97      0.97        60
+           Square       0.86      0.85      0.85        66
+          Stadium       1.00      0.94      0.97        51
+     StorageTanks       1.00      0.97      0.99        74
+          Viaduct       0.97      0.99      0.98        90
+
+         accuracy                           0.95      2000
+            0.95      0.95      0.95      2000
+     weighted avg       0.96      0.95      0.95      2000
+root@autodl-container-cb2b40b833-524095af:~/autodl-tmp/SRTP# 
+
+
+ALexNet
+[Epoch 27] Train Loss: 0.0950, Val Accuracy: 0.6960
+Model Saved!
+
+
